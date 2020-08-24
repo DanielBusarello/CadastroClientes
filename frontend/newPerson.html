@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+
+    <link rel="stylesheet" href="/css/pages/global.css">
+    <link rel="stylesheet" href="/css/pages/newPerson.css">
+</head>
+<body>
+    <div class="new-person-container">
+        <div class="content">
+            <section>
+                <h1>Cadastrar nova pessoa</h1>
+                <p>Insira as informações nos campos ao lado.</p>
+
+                <a class="back-link" href="/profile.html">
+                    <FiArrowLeft size={16} color="#E02041" />
+                    Voltar para home
+                </a>
+            </section>
+            <form onSubmit=>
+                <input type="text" placeholder="Nome">
+                <input type="number" placeholder="Idade">
+                <input type="number" placeholder="Altura">
+                <input type="number" placeholder="Peso">
+                <input type="number" placeholder="Telefone">
+                <input type="email" placeholder="Email">
+
+                <button class="button">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
