@@ -1,0 +1,11 @@
+{
+    "env" : {
+        "MYSQL_USER" : "root",
+        "MYSQL_PASSWORD" : "12345",
+        "MYSQL_DATABASE" : "clientes",
+        "MYSQL_HOST" : "localhost",
+        "MYSQL_PORT" : 3306,
+
+        "JWT_KEY" : "admin"
+    }
+}
