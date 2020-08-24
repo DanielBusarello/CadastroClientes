@@ -24,6 +24,28 @@ exports.getPessoa = async (req, res, next) => {
     }
 };
 
+exports.getPessoaById = async (req, res, next) => {
+    try {
+        const query = "SELECT * FROM pessoa WHERE id_pessoa = ?";
+        const result = await mysql.execute(query, req.params.id_pessoa);
+        const response = {
+            pessoa: {
+                id_pessoa: result[0].id_pessoa,
+                nome: result[0].nome,
+                idade: result[0].idade,
+                altura: result[0].altura,
+                peso: result[0].peso,
+                telefone: result[0].telefone,
+                email: result[0].email,
+            }
+        };
+        
+        return res.status(200).send(response);
+    } catch (error) {
+        return res.status(500).send({ error: error });
+    }
+};
+
 exports.postPessoa = async (req, res, next) => {
     try {
         const query = 'INSERT INTO pessoa (nome, idade, altura, peso, telefone, email) VALUES (?,?,?,?,?,?)';
